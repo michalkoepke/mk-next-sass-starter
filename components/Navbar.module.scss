@@ -1,0 +1,115 @@
+@import "../styles/colors";
+@import "../styles/media";
+
+.navi {
+  background-color: $color-primary;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  margin-top: 0;
+  .navi__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+
+    .logo {
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .menu__links {
+        display: none;
+
+        @include tablet-landscape-up {
+          display: block;
+        }
+
+        // @include phone-only {
+        //   display: none;
+        // }
+      }
+
+      .menuIcon {
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+
+        @include tablet-landscape-up {
+          display: none;
+        }
+      }
+
+      a {
+        margin: 0 1rem;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100vh;
+  background-color: darken($color-primary, 10%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.3s;
+
+  z-index: 99;
+
+  // display: none;
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.mobileMenuActive {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  background-color: darken($color-primary, 10%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 99;
+  transition: 0.3s;
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+}

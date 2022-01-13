@@ -1,0 +1,13 @@
+@import "media";
+
+.mkcontainer {
+  width: 100%;
+
+  @include tablet-landscape-up {
+    width: 80%;
+  }
+
+  @include big-desktop-up {
+    width: 70%;
+  }
+}

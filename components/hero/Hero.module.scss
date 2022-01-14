@@ -9,7 +9,7 @@
   width: 100%;
   //   background-color: burlywood;
   margin-top: 0px;
-  padding-top: 4rem;
+  padding-top: 3rem;
   box-sizing: border-box;
   height: auto;
   padding-bottom: 6rem;
@@ -103,8 +103,11 @@
       background-position: center;
       background-size: cover;
 
+      clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+
       @include tablet-landscape-up {
-        padding: 4rem;
+        height: 80%;
+        margin-top: 4rem;
       }
     }
   }

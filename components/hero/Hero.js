@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <div className={styles.gridDouble}>
+        <div className={styles.gridHero}>
           <div className={styles.left}>
             <h1>Some Main Title</h1>
             <h2>Subtitle goes here</h2>

@@ -126,9 +126,10 @@
   padding: 4rem 0;
   width: 100%;
   margin: 0 auto;
+  background-color: white;
 
   @include phone-only {
-    width: 90%;
+    // width: 90%;
     height: auto;
   }
 }

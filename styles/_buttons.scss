@@ -1,0 +1,17 @@
+@import "colors";
+
+.buttonStandart {
+  background-color: $color-primary;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: darken($color-primary, 10%);
+    transition: 0.5s;
+  }
+}

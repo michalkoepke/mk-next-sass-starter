@@ -10,3 +10,13 @@
     grid-template-columns: 1fr;
   }
 }
+
+.gridDouble {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  @include phone-only {
+    grid-template-columns: 1fr;
+  }
+}

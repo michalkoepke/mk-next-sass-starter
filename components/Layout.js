@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div style={{ marginTop: "0px" }}>
       <Navbar />
       {children}
       <Footer />

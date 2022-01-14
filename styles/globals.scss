@@ -6,6 +6,23 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
+
+  background-image: url("../public/Grey-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.2em;
 }
 
 a {
@@ -22,6 +39,9 @@ p {
   box-sizing: border-box;
 }
 
+button {
+  font-family: "Open Sans", sans-serif;
+}
 // $font-stack: "Poppins", sans-serif;
 
 .container {
@@ -37,3 +57,8 @@ p {
     width: 70%;
   }
 }
+
+// .mainWrapper {
+//   margin: 0;
+//   padding: 0;
+// }

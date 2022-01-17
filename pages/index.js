@@ -12,42 +12,33 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <main className={styles.main}>
-        <h1 className={styles.title}>
-          Custom <a href="https://nextjs.org">Next.js!</a> starter
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.box}>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero
-            optio provident quaerat eveniet. Necessitatibus quas, earum sed
-            minima, blanditiis id molestias nisi at autem delectus ex! Corporis
-            repellat eum enim assumenda. Repudiandae possimus commodi illo in
-            accusantium. Blanditiis labore iure assumenda, nemo nihil officiis
-            odio maiores eveniet? Ipsam soluta vel non delectus suscipit ut,
-            quasi necessitatibus minima perspiciatis eaque aperiam ducimus
-            provident dolorem, dolore cumque sapiente harum! Accusamus
-            praesentium perspiciatis voluptatibus, nemo nostrum rerum aliquam ea
-            iure explicabo enim laudantium incidunt, fuga reiciendis quo ex odit
-            laborum repellendus omnis maxime est! Ad, excepturi obcaecati! Nihil
-            itaque aperiam deleniti aut ex.
-          </p>
-        </div>
-      </main> */}
-
       <Hero />
 
       <section className={styles.section1}>
         <div className="container">
+          <h1>First Section</h1>
           <div className={styles.testGrid}>
-            <div className={styles.card}>test</div>
-            <div className={styles.card}>test</div>
-            <div className={styles.card}>test</div>
+            <div className={styles.card}>
+              <h2>Test</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Adipisci excepturi, recusandae illo rerum perspiciatis omnis.
+              </p>
+            </div>
+            <div className={styles.card}>
+              <h2>Test</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Adipisci excepturi, recusandae illo rerum perspiciatis omnis.
+              </p>
+            </div>
+            <div className={styles.card}>
+              <h2>Test</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Adipisci excepturi, recusandae illo rerum perspiciatis omnis.
+              </p>
+            </div>
           </div>
         </div>
       </section>

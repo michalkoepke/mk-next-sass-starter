@@ -103,18 +103,18 @@
     line-height: 1.5;
   }
 
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+
   @include phone-only {
     width: 100%;
     margin: 0.5rem 0;
     // flex-direction: column;
   }
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: $color-primary;
-  border-color: $color-primary;
 }
 
 .logo {
@@ -123,13 +123,20 @@
 }
 
 .section1 {
-  padding: 4rem 0;
+  padding: 8rem 0;
   width: 100%;
   margin: 0 auto;
   background-color: white;
+  height: auto;
 
-  @include phone-only {
+  h1 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
+
+  @include tablet-landscape-up {
     // width: 90%;
-    height: auto;
+    height: 100vh;
   }
 }

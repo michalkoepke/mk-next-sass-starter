@@ -2,8 +2,95 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import Hero from "../components/hero/Hero";
+import gsap from "gsap";
+import { useRef } from "react";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import useIsomorphicLayoutEffect from "../anim/useIsomorphicLayoutEffect";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  // ScrollTrigger.defaults({
+  //   toggleActions: "restart pause pause pause",
+  // });
+
+  const cardWrapper = useRef(null);
+
+  // parallax
+
+  const para_background = useRef(null);
+  const para_content = useRef(null);
+
+  // console.log("cardWrapper: ", cardWrapper.current);
+
+  useIsomorphicLayoutEffect(() => {
+    const elements = cardWrapper.current.children;
+    // console.log("elements: ", elements);
+
+    const cards = Array.from(elements);
+
+    let tl = gsap.timeline({
+      defaults: { duration: 2, ease: "power3.inOut" },
+
+      scrollTrigger: {
+        trigger: "#para_section",
+        start: "top 30%",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    }); // console.log("card grid elements: ", cards);
+
+    tl.to(para_background.current, { clipPath: "circle(50% at 50% 50%)" });
+
+    ScrollTrigger.defaults({
+      toggleActions: "restart pause pause pause",
+    });
+
+    cards.forEach((card) => {
+      gsap.fromTo(
+        card,
+
+        { y: "+=100", opacity: 0 },
+
+        {
+          y: 0,
+          opacity: 1,
+          // stagger: { amount: 0.5 },
+
+          scrollTrigger: {
+            trigger: "#section1",
+            start: "top 40%",
+
+            end: "bottom, 20%",
+
+            scrub: true,
+          },
+        }
+      );
+    });
+
+    para_background.current.style.backgroundPosition = `50% ${
+      -innerHeight / 2
+    }px`;
+
+    gsap.to(
+      para_background.current,
+
+      {
+        backgroundPosition: `50% ${innerHeight / 3.5}px`,
+        ease: "none",
+
+        scrollTrigger: {
+          trigger: "#para_section",
+          // start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
+
   return (
     <div>
       <Head>
@@ -14,10 +101,10 @@ export default function Home() {
 
       <Hero />
 
-      <section className={styles.section1}>
+      <section className={styles.section_grey50} id="section1">
         <div className="container">
           <h1>First Section</h1>
-          <div className={styles.testGrid}>
+          <div className={styles.testGrid} ref={cardWrapper}>
             <div className={styles.card}>
               <h2>Test</h2>
               <p>
@@ -39,6 +126,29 @@ export default function Home() {
                 Adipisci excepturi, recusandae illo rerum perspiciatis omnis.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* section 2 */}
+
+      <section className={styles.section_grey300} id="section2"></section>
+      <section className={styles.section_transparent} id="section3"></section>
+
+      {/* section parallax */}
+
+      <section className={styles.section_parallax} id="para_section">
+        <div className={styles.background} ref={para_background}></div>
+
+        <div className={styles.parallax_container} ref={para_content}>
+          <div>
+            <h1>Parallax test</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+              accusamus blanditiis, voluptates dolor dicta eaque voluptatem
+              totam quas eveniet tenetur eos, excepturi officia. Esse, sapiente
+              perferendis tempora quidem nam iusto?
+            </p>
           </div>
         </div>
       </section>

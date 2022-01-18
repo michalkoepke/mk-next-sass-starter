@@ -1,0 +1,45 @@
+@import "media";
+
+%section {
+  padding: 8rem 0;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+
+  h1 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
+
+  @include tablet-landscape-up {
+    // width: 90%;
+    height: 100vh;
+  }
+}
+
+.section_transparent {
+  @extend %section;
+  background-color: transparent;
+}
+
+.section_grey50 {
+  @extend %section;
+  background-color: $color-grey50;
+}
+.section_grey300 {
+  @extend %section;
+  background-color: $color-grey300;
+}
+.section_grey500 {
+  @extend %section;
+  background-color: $color-grey500;
+}
+.section_grey700 {
+  @extend %section;
+  background-color: $color-grey700;
+}
+.section_grey900 {
+  @extend %section;
+  background-color: $color-grey900;
+}

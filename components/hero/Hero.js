@@ -19,14 +19,10 @@ const Hero = () => {
 
     const array = Array.from(elements);
 
-    // console.log("elements array: ", array);
-
     const title = array[0];
     const subtitle = array[1];
     const paragraph = array[2];
     const button = array[3];
-
-    console.log("array elements: ", title, subtitle, paragraph, button);
 
     gsap.set([title, subtitle, paragraph, button], { autoAlpha: 0 });
 

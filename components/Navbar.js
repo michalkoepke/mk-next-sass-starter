@@ -31,8 +31,8 @@ const Navbar = () => {
                 <a>Home</a>
               </Link>
 
-              <Link href="/coins">
-                <a>Link 2</a>
+              <Link href="/about">
+                <a>About</a>
               </Link>
               <Link href="/coins">
                 <a>Link 3</a>

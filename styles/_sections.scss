@@ -23,6 +23,10 @@
   background-color: transparent;
 }
 
+.section_grey100 {
+  @extend %section;
+  background-color: $color-grey100;
+}
 .section_grey50 {
   @extend %section;
   background-color: $color-grey50;
@@ -42,4 +46,9 @@
 .section_grey900 {
   @extend %section;
   background-color: $color-grey900;
+}
+
+.section_primary_color {
+  @extend %section;
+  background-color: $color-primary;
 }

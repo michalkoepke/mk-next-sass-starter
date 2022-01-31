@@ -1,0 +1,12 @@
+@import "colors";
+@import "media";
+@import "grids";
+@import "utilities";
+@import "sections";
+
+.aboutHeader {
+  color: $color-white;
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 4rem;
+}

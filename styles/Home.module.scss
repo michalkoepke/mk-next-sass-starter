@@ -187,3 +187,53 @@
     z-index: -1;
   }
 }
+
+// section stagger
+
+.section_stagger {
+  position: relative;
+  height: auto;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100vh;
+
+  background-color: $color-grey50;
+
+  // @include tablet-landscape-up {
+  //   height: 100vh;
+  //   width: 100%;
+  // }
+
+  .stagger_container {
+    width: 90%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // opacity: 0.99;
+
+    // background-color: lightblue;
+
+    @include tablet-landscape-up {
+      width: 80%;
+      height: 100%;
+    }
+
+    @include big-desktop-up {
+      width: 70%;
+      height: 100%;
+    }
+
+    .s_box {
+      height: 60px;
+      width: 60px;
+      background-color: $color-primary;
+      margin: 0.5rem;
+      display: inline-block;
+      padding: 0;
+      // opacity: 0;
+    }
+  }
+}

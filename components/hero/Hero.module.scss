@@ -5,6 +5,14 @@
 @import "../../styles/buttons";
 @import "../../styles/grids";
 
+.header {
+  background: url("https://picsum.photos/400/500");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
 .wrapper {
   width: 100%;
   //   background-color: burlywood;
@@ -105,7 +113,7 @@
       background-position: center;
       background-size: cover;
 
-      clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+      // clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
 
       @include tablet-landscape-up {
         height: 80%;
